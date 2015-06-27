@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"time"
 
-	"github.com/mailgun/oxy/testutils"
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/testutils"
+	"github.com/bcbroussard/oxy/utils"
 	"github.com/mailgun/timetools"
 
 	. "gopkg.in/check.v1"

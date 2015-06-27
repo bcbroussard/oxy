@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mailgun/oxy/memmetrics"
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/memmetrics"
+	"github.com/bcbroussard/oxy/utils"
 	"github.com/mailgun/timetools"
 )
 

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/utils"
 	"github.com/mailgun/timetools"
 	"github.com/mailgun/ttlmap"
 )

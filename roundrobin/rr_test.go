@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/mailgun/oxy/forward"
-	"github.com/mailgun/oxy/testutils"
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/forward"
+	"github.com/bcbroussard/oxy/testutils"
+	"github.com/bcbroussard/oxy/utils"
 
 	. "gopkg.in/check.v1"
 )

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/utils"
 )
 
 // Limiter tracks concurrent connection per token

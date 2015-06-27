@@ -3,9 +3,9 @@ Oxy
 
 Oxy is a Go library with HTTP handlers that enhance HTTP standard library:
 
-* [Stream](http://godoc.org/github.com/mailgun/oxy/stream) retries and buffers requests and responses 
-* [Forward](http://godoc.org/github.com/mailgun/oxy/forward) forwards requests to remote location and rewrites headers 
-* [Roundrobin](http://godoc.org/github.com/mailgun/oxy/roundrobin) is a round-robin load balancer 
+* [Stream](http://godoc.org/github.com/mailgun/oxy/stream) retries and buffers requests and responses
+* [Forward](http://godoc.org/github.com/mailgun/oxy/forward) forwards requests to remote location and rewrites headers
+* [Roundrobin](http://godoc.org/github.com/mailgun/oxy/roundrobin) is a round-robin load balancer
 * [Circuit Breaker](http://godoc.org/github.com/mailgun/oxy/cbreaker) Hystrix-style circuit breaker
 * [Connlimit](http://godoc.org/github.com/mailgun/oxy/connlimit) Simultaneous connections limiter
 * [Ratelimit](http://godoc.org/github.com/mailgun/oxy/ratelimit) Rate limiter (based on tokenbucket algo)
@@ -32,8 +32,8 @@ Simple reverse proxy
 
 import (
   "net/http"
-  "github.com/mailgun/oxy/forward"
-  "github.com/mailgun/oxy/testutils"
+  "github.com/bcbroussard/oxy/forward"
+  "github.com/bcbroussard/oxy/testutils"
   )
 
 // Forwards incoming requests to whatever location URL points to, adds proper forwarding headers
@@ -44,7 +44,7 @@ redirect := http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		req.URL = testutils.ParseURI("http://localhost:63450")
 		fwd.ServeHTTP(w, req)
 })
-	
+
 // that's it! our reverse proxy is ready!
 s := &http.Server{
 	Addr:           ":8080",
@@ -60,8 +60,8 @@ As a next step, let us add a round robin load-balancer:
 
 import (
   "net/http"
-  "github.com/mailgun/oxy/forward"
-  "github.com/mailgun/oxy/roundrobin"
+  "github.com/bcbroussard/oxy/forward"
+  "github.com/bcbroussard/oxy/roundrobin"
   )
 
 // Forwards incoming requests to whatever location URL points to, adds proper forwarding headers
@@ -85,8 +85,8 @@ What if we want to handle retries and replay the request in case of errors? `str
 
 import (
   "net/http"
-  "github.com/mailgun/oxy/forward"
-  "github.com/mailgun/oxy/roundrobin"
+  "github.com/bcbroussard/oxy/forward"
+  "github.com/bcbroussard/oxy/roundrobin"
   )
 
 // Forwards incoming requests to whatever location URL points to, adds proper forwarding headers

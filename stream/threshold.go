@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/mailgun/oxy/utils"
+	"github.com/bcbroussard/oxy/utils"
 	"github.com/mailgun/predicate"
 )
 

@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/bcbroussard/oxy/utils"
 	"github.com/mailgun/log"
-	"github.com/mailgun/oxy/utils"
 )
 
 type SideEffect interface {

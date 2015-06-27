@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mailgun/oxy/memmetrics"
-	"github.com/mailgun/oxy/testutils"
+	"github.com/bcbroussard/oxy/memmetrics"
+	"github.com/bcbroussard/oxy/testutils"
 	"github.com/mailgun/timetools"
 
 	. "gopkg.in/check.v1"
